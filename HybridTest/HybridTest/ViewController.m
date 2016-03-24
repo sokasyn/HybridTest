@@ -32,6 +32,18 @@
 
 - (void)initComponents{
     NSLog(@"components init..");
+    [self loadWebPage];
+}
+
+- (void)loadWebPage{
+    NSURL *url = [[NSURL alloc] initWithString:@"http://www.baidu.com"];
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+    [self.webView loadRequest:request];
+    if (self.webView.canGoBack) {
+        NSLog(@"can go back");
+    }else{
+        NSLog(@"Can not go back.");
+    }
 }
 
 @end

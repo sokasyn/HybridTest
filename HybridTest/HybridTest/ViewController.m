@@ -18,11 +18,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     NSLog(@"view did load..");
+    [self inits];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)inits{
+    [self initComponents];
+}
+
+- (void)initComponents{
+    NSLog(@"components init..");
 }
 
 @end
